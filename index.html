@@ -1,12 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+    }
+
+    .input-focus:focus {
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
-<body>
-    <h1>Entendiendo Ramas (Branch) en Git</h1>
-    <h2>Aquí agregare el diseño del login</h2>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 relative overflow-hidden">
+
+  <!-- Fondo decorativo -->
+  <div class="absolute w-72 h-72 bg-purple-400 rounded-full blur-3xl opacity-30 top-10 left-10"></div>
+  <div class="absolute w-72 h-72 bg-blue-400 rounded-full blur-3xl opacity-30 bottom-10 right-10"></div>
+
+  <!-- Card -->
+  <div class="glass fade-in shadow-2xl rounded-3xl p-8 w-full max-w-md text-white border border-white/20">
+    
+    <!-- Logo / título -->
+    <div class="text-center mb-8">
+      <div class="text-4xl mb-2">🔐</div>
+      <h2 class="text-2xl font-semibold">Bienvenido</h2>
+      <p class="text-sm text-white/70">Accede a tu cuenta</p>
+    </div>
+
+    <form class="space-y-5">
+
+      <!-- Email -->
+      <div>
+        <label class="text-sm text-white/80">Correo</label>
+        <div class="flex items-center bg-white/10 rounded-lg mt-1 px-3">
+          <span class="text-white/70">📧</span>
+          <input 
+            type="email"
+            placeholder="correo@email.com"
+            class="w-full bg-transparent px-3 py-2 focus:outline-none text-white placeholder-white/50"
+          >
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label class="text-sm text-white/80">Contraseña</label>
+        <div class="flex items-center bg-white/10 rounded-lg mt-1 px-3">
+          <span class="text-white/70">🔒</span>
+          <input 
+            type="password"
+            placeholder="********"
+            class="w-full bg-transparent px-3 py-2 focus:outline-none text-white placeholder-white/50"
+          >
+        </div>
+      </div>
+
+      <!-- Opciones -->
+      <div class="flex justify-between text-sm text-white/70">
+        <label class="flex items-center gap-2">
+          <input type="checkbox" class="accent-indigo-400">
+          Recordarme
+        </label>
+        <a href="#" class="hover:text-white transition">
+          Olvidé contraseña
+        </a>
+      </div>
+
+      <!-- Botón -->
+      <button 
+        class="w-full bg-white text-indigo-600 font-semibold py-2 rounded-lg hover:bg-indigo-100 transition duration-300 active:scale-95"
+      >
+        Iniciar sesión
+      </button>
+
+    </form>
+
+    <!-- Divider -->
+    <div class="flex items-center my-6">
+      <div class="flex-1 h-px bg-white/20"></div>
+      <span class="px-3 text-sm text-white/60">o</span>
+      <div class="flex-1 h-px bg-white/20"></div>
+    </div>
+
+    <!-- Social -->
+    <div class="flex gap-3">
+      <button class="flex-1 bg-white/10 py-2 rounded-lg hover:bg-white/20 transition">
+        Google
+      </button>
+      <button class="flex-1 bg-white/10 py-2 rounded-lg hover:bg-white/20 transition">
+        GitHub
+      </button>
+    </div>
+
+    <!-- Registro -->
+    <p class="text-center text-sm text-white/70 mt-6">
+      ¿No tienes cuenta?
+      <a href="#" class="text-white font-semibold hover:underline">
+        Regístrate
+      </a>
+    </p>
+
+  </div>
 </body>
 </html>
